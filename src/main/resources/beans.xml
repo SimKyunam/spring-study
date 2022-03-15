@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <bean id="xmlHello" class="com.example.springstudy.spring.XmlHello">
+        <property name="names">
+            <list>
+                <value>Spring</value>
+                <value>IoC</value>
+                <value>DI</value>
+            </list>
+        </property>
+        <property name="ages">
+            <map>
+                <entry key="kim" value="30"/>
+                <entry key="sim" value="35"/>
+                <entry key="lee" value="40"/>
+            </map>
+        </property>
+        <property name="dbName" value="${database.username}"/>
+        <property name="dbUrl" value="${database.url}"/>
+    </bean>
+</beans>

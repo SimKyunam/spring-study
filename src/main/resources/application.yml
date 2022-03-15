@@ -1,1 +1,3 @@
-
+database:
+  username: testDb
+  password: 1111
