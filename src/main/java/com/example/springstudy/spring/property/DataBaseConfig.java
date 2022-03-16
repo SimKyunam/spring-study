@@ -1,4 +1,4 @@
-package com.example.springstudy.spring;
+package com.example.springstudy.spring.property;
 
 import lombok.Getter;
 import org.springframework.beans.factory.annotation.Value;
@@ -15,4 +15,7 @@ public class DataBaseConfig {
 
     @Value("${database.password}")
     private String dbPassword;
+
+    @Value("${database.username}")
+    public String dbNameBySpEL;
 }

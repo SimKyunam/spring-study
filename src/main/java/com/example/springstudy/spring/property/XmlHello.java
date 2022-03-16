@@ -1,4 +1,4 @@
-package com.example.springstudy.spring;
+package com.example.springstudy.spring.property;
 
 import lombok.Getter;
 import lombok.Setter;

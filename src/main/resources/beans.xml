@@ -3,7 +3,7 @@
        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
        xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
 
-    <bean id="xmlHello" class="com.example.springstudy.spring.XmlHello">
+    <bean id="xmlHello" class="com.example.springstudy.spring.property.XmlHello">
         <property name="names">
             <list>
                 <value>Spring</value>
