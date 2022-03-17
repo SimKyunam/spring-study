@@ -6,6 +6,7 @@ import org.springframework.core.convert.ConversionService;
 import org.springframework.stereotype.Component;
 
 import java.beans.PropertyEditor;
+import java.util.List;
 
 @Component
 @Getter
@@ -17,6 +18,9 @@ public class Hello {
 
     @Value("${database.url}")
     private String dbUrl;
+
+    @Value("${user.names}")
+    private List<String> userList;
 
     @Value("Test Data")
     private void setName(String name) {

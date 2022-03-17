@@ -26,6 +26,7 @@ public class PropertyTest {
     void Value_어노테이션() {
         System.out.println(hello.getName());
         System.out.println(hello.getDbName());
+        System.out.println(hello.getUserList());
     }
 
     @Test

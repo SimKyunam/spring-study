@@ -16,8 +16,19 @@ class SpELValueTest {
     @Test
     void Value_어노테이션() {
         System.out.println(spELValue.getDbName());
+        System.out.println(spELValue.getDbNameMethod());
+
         System.out.println(spELValue.getPath());
         System.out.println(spELValue.getOsName());
+        System.out.println(spELValue.getJavaVersion());
         System.out.println(spELValue.getOsVersion());
+    }
+
+    @Test
+    void 연산_어노테이션() {
+        System.out.println(spELValue.getValue());
+        System.out.println(spELValue.getGreeting());
+        System.out.println(spELValue.isTrueOrFalse());
+        System.out.println(spELValue.isUserAgeCheck());
     }
 }

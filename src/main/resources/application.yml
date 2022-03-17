@@ -1,3 +1,6 @@
 database:
   username: testDb
   password: 1111
+user:
+  names: 홍길동, 강감찬, 이순신
+  age: 30

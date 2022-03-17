@@ -14,13 +14,30 @@ public class SpELValue {
     @Value("#{dataBaseConfig.dbNameBySpEL}")
     private String dbName;
 
+    @Value("#{dataBaseConfig.getDbNameBySpEL()}")
+    private String dbNameMethod;
+
     @Value("#{systemProperties['os.name']}")
     private String osName;
 
     @Value("#{systemProperties['os.version']}")
     private String osVersion;
 
+    @Value("#{systemProperties['java.version']}")
+    private String javaVersion;
+
     @Value("#{systemEnvironment.Path}")
     private String path;
 
+    @Value("#{1+1}")
+    private int value;
+
+    @Value("#{'hello ' + 'world'}")
+    private String greeting;
+
+    @Value("#{1 eq 5}")
+    private boolean trueOrFalse;
+
+    @Value("#{'${user.age}' eq '30'}")
+    private boolean userAgeCheck;
 }
