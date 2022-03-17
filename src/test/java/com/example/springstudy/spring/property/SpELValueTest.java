@@ -20,9 +20,4 @@ class SpELValueTest {
         System.out.println(spELValue.getOsName());
         System.out.println(spELValue.getOsVersion());
     }
-
-    @Test
-    void OS_어노테이션() {
-        spELValue.getOsProperties();
-    }
 }

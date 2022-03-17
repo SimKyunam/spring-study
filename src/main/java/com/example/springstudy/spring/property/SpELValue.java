@@ -20,9 +20,6 @@ public class SpELValue {
     @Value("#{systemProperties['os.version']}")
     private String osVersion;
 
-    @Value("#{systemProperties.os}")
-    private Properties osProperties;
-
     @Value("#{systemEnvironment.Path}")
     private String path;
 

@@ -20,10 +20,15 @@ public class PrototypeTest {
                 SingletonBean.class, SingletonClientBean.class);
 
         Set<SingletonBean> beans = new HashSet<>();
+
+        //DL (Dependency Lookup)
+        //bean을 개발자들이 직접 컨테이너에서 api를 이용해 lookup하는 것을 말함
         beans.add(ac.getBean(SingletonBean.class));
         beans.add(ac.getBean(SingletonBean.class));
         assertEquals(beans.size(), 1);
 
+        //DI (Dependency Injection)
+        //각 class 의존관계를 빈 설정 정보를 바탕으로 컨테이너가 자동으로 연결
         beans.add(ac.getBean(SingletonClientBean.class).bean1);
         beans.add(ac.getBean(SingletonClientBean.class).bean2);
         assertEquals(beans.size(), 1);
