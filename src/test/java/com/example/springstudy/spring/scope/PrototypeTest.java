@@ -57,6 +57,10 @@ public class PrototypeTest {
         assertEquals(beans.size(), 4);
     }
 
+    /**
+     * 말그대로 빈이 사용되어지는 범위(?)인데, 빈이 앱이 구동되는 동안 한개만 만들어서 쓸 것인지 HTTP요청마다 생성해서 쓸 것인지 등등를 결정하는 것이 스코프
+     * https://docs.spring.io/spring-framework/docs/current/reference/html/core.html#beans-factory-scopes
+     */
     @Scope(ConfigurableBeanFactory.SCOPE_PROTOTYPE)
     static class PrototypeBean {}
 
