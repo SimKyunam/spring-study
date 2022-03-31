@@ -29,8 +29,8 @@ public class SpELValue {
     @Value("#{systemEnvironment.Path}")
     private String path;
 
-    @Value("#{1+1}")
-    private int value;
+    @Value("#{dataBaseConfig.getDbNameBySpEL() + dataBaseConfig.getDbNameBySpEL()}")
+    private String value;
 
     @Value("#{'hello ' + 'world'}")
     private String greeting;

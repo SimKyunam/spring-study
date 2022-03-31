@@ -17,5 +17,5 @@ public class DataBaseConfig {
     private String dbPassword;
 
     @Value("${database.username}")
-    public String dbNameBySpEL;
+    private String dbNameBySpEL;
 }

@@ -16,12 +16,17 @@ public class CustomerDao {
     public void init() {
         list.add(Customer.builder().customerNo(1L).name("심규남").age("20").build());
         list.add(Customer.builder().customerNo(2L).name("홍길동").age("30").build());
+        list.add(Customer.builder().customerNo(3L).name("홍길동").age("30").build());
+        list.add(Customer.builder().customerNo(4L).name("홍길동").age("30").build());
+        list.add(Customer.builder().customerNo(5L).name("홍길동").age("30").build());
+        list.add(Customer.builder().customerNo(6L).name("홍길동").age("30").build());
     }
 
     public Customer findCustomerByNo(Long customerNo) {
         return list.stream()
                 .filter(customer -> customer.getCustomerNo().equals(customerNo))
                 .findAny()
-                .orElseThrow(() -> new RuntimeException("값이 존재하지 않습니다."));
+                .orElseThrow(RuntimeException::new);
     }
 }
+

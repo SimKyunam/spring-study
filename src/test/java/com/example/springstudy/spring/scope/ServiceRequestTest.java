@@ -15,7 +15,7 @@ class ServiceRequestTest {
     @Test
     public void serviceRequest() {
         ServiceRequest serviceRequest = this.context.getBean(ServiceRequest.class);
-        serviceRequest.setCustomerByCustomerNo(1L);
+        serviceRequest.setCustomerByCustomerNo(2L);
 
         Customer customer = serviceRequest.getCustomer();
         System.out.println(customer);
