@@ -13,12 +13,6 @@ import java.util.List;
 public class Hello {
     private String name;
 
-    @Value("${database.username}")
-    private String dbName;
-
-    @Value("${database.url}")
-    private String dbUrl;
-
     @Value("${user.names}")
     private List<String> userList;
 

@@ -18,7 +18,5 @@
                 <entry key="lee" value="40"/>
             </map>
         </property>
-        <property name="dbName" value="${database.username}"/>
-        <property name="dbUrl" value="${database.url}"/>
     </bean>
 </beans>

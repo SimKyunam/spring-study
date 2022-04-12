@@ -1,15 +1,8 @@
 package com.example.springstudy.spring.property;
 
-import com.example.springstudy.spring.property.DataBaseConfig;
-import com.example.springstudy.spring.property.Hello;
-import com.example.springstudy.spring.property.XmlHello;
-import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
-
-import java.util.ArrayList;
-import java.util.List;
 
 @SpringBootTest
 public class PropertyTest {

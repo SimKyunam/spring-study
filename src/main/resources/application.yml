@@ -1,7 +1,30 @@
+spring:
+  profiles:
+    active: local
+    include: oauth
+
+---
+spring:
+  config:
+    activate:
+      on-profile: local
+
 database:
-  username: testDb
+  name: local-database
   password: 1111
 user:
   names: 홍길동, 강감찬, 이순신
   age: 30
 
+---
+spring:
+  config:
+    activate:
+      on-profile: dev
+
+database:
+  name: dev-database
+  password: zaq1xsw2CDE#
+user:
+  names: 사용자, 사용자1, 사용자2
+  age: 30

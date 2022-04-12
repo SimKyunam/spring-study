@@ -11,11 +11,6 @@ import java.util.Properties;
 @Getter
 @Setter
 public class SpELValue {
-    @Value("#{dataBaseConfig.dbNameBySpEL}")
-    private String dbName;
-
-    @Value("#{dataBaseConfig.getDbNameBySpEL()}")
-    private String dbNameMethod;
 
     @Value("#{systemProperties['os.name']}")
     private String osName;
@@ -28,9 +23,6 @@ public class SpELValue {
 
     @Value("#{systemEnvironment.Path}")
     private String path;
-
-    @Value("#{dataBaseConfig.getDbNameBySpEL() + dataBaseConfig.getDbNameBySpEL()}")
-    private String value;
 
     @Value("#{'hello ' + 'world'}")
     private String greeting;
