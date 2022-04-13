@@ -34,3 +34,7 @@ app:
       - http://localhost:3000/oauth2/redirect
       - myandroidapp://oauth2/redirect
       - myiosapp://oauth2/redirect
+    authorizedRedirect: http://localhost:3000/oauth2/redirect, myandroidapp://oauth2/redirect
+    authorizedRedirectTest: >
+      http://localhost:3000/oauth2/redirect,
+      myandroidapp://oauth2/redirect

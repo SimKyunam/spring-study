@@ -12,13 +12,9 @@ public class PropertyTest {
     @Autowired
     private XmlHello xmlHello;
 
-    @Autowired
-    private DataBaseConfig dataBaseConfig;
-
     @Test
     void Value_어노테이션() {
         System.out.println(hello.getName());
-        System.out.println(hello.getDbName());
         System.out.println(hello.getUserList());
     }
 
@@ -31,14 +27,10 @@ public class PropertyTest {
 
     @Test
     void Properties_테스트() {
-        System.out.println(hello.getDbUrl());
         System.out.println(xmlHello.getDbUrl());
     }
 
     @Test
     void Properties_우선순위_테스트() {
-        System.out.println(dataBaseConfig.getDbUrl());
-        System.out.println(dataBaseConfig.getDbName());
-        System.out.println(dataBaseConfig.getDbPassword());
     }
 }

@@ -6,8 +6,8 @@ import org.springframework.stereotype.Component;
 
 import java.util.List;
 
-@Component
 @Getter
+@Component
 public class BaseProperties {
 
     @Value("${database.name}")
