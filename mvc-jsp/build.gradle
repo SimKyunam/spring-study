@@ -1,13 +1,14 @@
+//targetCompatibility = JavaVersion.VERSION_16
 plugins {
-    id 'org.springframework.boot' version '2.6.4'
+    id 'org.springframework.boot' version '2.6.7'
     id 'io.spring.dependency-management' version '1.0.11.RELEASE'
-    id 'org.asciidoctor.convert' version '1.5.8'
     id 'java'
+    id 'war'
 }
 
 group = 'com.example'
 version = '0.0.1-SNAPSHOT'
-sourceCompatibility = '17'
+sourceCompatibility = "16"
 
 configurations {
     compileOnly {
@@ -19,26 +20,17 @@ repositories {
     mavenCentral()
 }
 
-//ext {
-//    set('snippetsDir', file("build/generated-snippets"))
-//}
-
 dependencies {
+    implementation 'org.apache.tomcat.embed:tomcat-embed-jasper'
+    implementation 'javax.servlet:jstl'
+
     implementation 'org.springframework.boot:spring-boot-starter-web'
     compileOnly 'org.projectlombok:lombok'
     annotationProcessor 'org.projectlombok:lombok'
+    providedRuntime 'org.springframework.boot:spring-boot-starter-tomcat'
     testImplementation 'org.springframework.boot:spring-boot-starter-test'
-    testImplementation 'org.springframework.restdocs:spring-restdocs-mockmvc'
-
-    annotationProcessor "org.springframework.boot:spring-boot-configuration-processor"
 }
 
 //tasks.named('test') {
-//    outputs.dir snippetsDir
 //    useJUnitPlatform()
-//}
-//
-//tasks.named('asciidoctor') {
-//    inputs.dir snippetsDir
-//    dependsOn test
 //}
